@@ -13,11 +13,15 @@ class Session {
 	}
 	
 	public function getLevel() {
-		if (!isset($_SESSION['pass'])){
-			return "";
-		}else{
-			return $_SESSION['pass'];
-		}
+		return $_SESSION['pass'];
+	}
+
+	public function setLog($value) {
+		$_SESSION['log'] = $value;
+	}
+	
+	public function getLog() {
+		return $_SESSION['log'];	
 	}
 
 	public function getUserName(){
@@ -36,7 +40,9 @@ class Session {
 	
 	public function isUserLogin(){
 		if(!isset($_SESSION['login_user'])){
-   			header("location:index.php");
+   			return False;
+   		}else{
+   			return True;
    		}
 	}
 }

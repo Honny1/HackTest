@@ -2,7 +2,7 @@
 
    include($_SERVER['DOCUMENT_ROOT']."/controlDatabase/connectDatabase.php");
    include_once($_SERVER['DOCUMENT_ROOT']."/sessions/Session.class.php");
-   include($_SERVER['DOCUMENT_ROOT']."/sessions/session.php");
+   //include_once($_SERVER['DOCUMENT_ROOT']."/sessions/session.php");
    $error="";
    
    if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -21,8 +21,8 @@
 		
       if($count == 1) {
          $_SESSION['login_user'] = $user_name;
-         $session->setLevel("L0");
-         header("location: ../index.php");
+         //$session->setLevel("L0");
+         header("location: index.php?pass=L0");
       }else {
          $error = "Your Login Name or Password is invalid";
       }
