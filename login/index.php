@@ -1,8 +1,8 @@
 <?php
 
-   include($_SERVER['DOCUMENT_ROOT']."/controlDatabase/connectDatabase.php");
-   include_once($_SERVER['DOCUMENT_ROOT']."/sessions/Session.class.php");
-   //include_once($_SERVER['DOCUMENT_ROOT']."/sessions/session.php");
+   include(realpath($_SERVER['DOCUMENT_ROOT']).'/controlDatabase/connectDatabase.php');
+   include_once(realpath($_SERVER['DOCUMENT_ROOT']).'/sessions/Session.class.php');
+
    $error="";
    
    if($_SERVER["REQUEST_METHOD"] == "POST") {
