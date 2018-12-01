@@ -1,0 +1,7 @@
+1) 1_10Oa9-C
+2) T-Rex
+3) 16
+4) slovo které opsahuje 234567890 ěščřžýáíé 
+5) hash na emailu 
+6) IP školy 
+7) end  
