@@ -8,11 +8,14 @@
    if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form 
       
-      $user_name = mysqli_real_escape_string($db,$_POST['username']);
-      $password = mysqli_real_escape_string($db,$_POST['password']); 
+      //$user_name = mysqli_real_escape_string($db,$_POST['username']);
+       //$password = mysqli_real_escape_string($db,$_POST['password']);
+    
+      $user_name = $_POST['username'];
+      $password = $_POST['password'];
       
       $sql = "SELECT id FROM user WHERE name = '$user_name' and pass = '$password'";
-      $result = mysqli_query($db,$sql);
+      $result = mysqli_query($db,$sql) or die('It fucked up!');
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       
       $count = mysqli_num_rows($result);
