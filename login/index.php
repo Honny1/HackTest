@@ -6,30 +6,24 @@
    $error="";
    
    if($_SERVER["REQUEST_METHOD"] == "POST") {
-      // username and password sent from form 
       
-      //$user_name = mysqli_real_escape_string($db,$_POST['username']);
-       //$password = mysqli_real_escape_string($db,$_POST['password']);
-    
-      $user_name = $_POST['username'];
-      $password = $_POST['password'];
-      
-      $sql = "SELECT id FROM user WHERE name = '$user_name' and pass = '$password'";
-      $result = mysqli_query($db,$sql) or die('It fucked up!');
-      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      
-      $count = mysqli_num_rows($result);
-      
-      // If result matched $user_name and $password, table row must be 1 row
-		
-      if($count == 1) {
-         $_SESSION['login_user'] = $user_name;
-         //$session->setLevel("L0");
+     $query = "SELECT * FROM user";
+     $result = $db->query($query);
+     $hodnota=False;
+     if (mysqli_num_rows($result)>0){
+	        while($row = mysqli_fetch_assoc($result)){
+                if ($row["name"]==$_POST["username"] && $row["pass"]==$_POST["password"]) {
+			        $hodnota = true;
+                }
+            }
+     }
+     if($hodnota) {
+         $_SESSION['login_user'] = $_POST["username"];
          header("location: index.php?pass=L0");
-      }else {
+     }else{
          $error = "Your Login Name or Password is invalid";
-      }
-    mysqli_close($db);
+     }
+     mysqli_close($db);
    }
 ?>
 <html>
