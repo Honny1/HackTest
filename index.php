@@ -6,9 +6,8 @@
     $session = new Session();
 	
 	$session->setLog(False);
-    echo "a";
-    echo $_SESSION['pass'];    
-	if($_SESSION['pass']=Null){
+    
+	if(!isset($_SESSION['pass']) && empty($_SESSION['pass'])){
 		$session->setLog(True);
 	}
 
