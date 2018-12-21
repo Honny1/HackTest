@@ -1,10 +1,9 @@
-+<?php include_once("htmlParts/header.php");?>
+<?php include_once("htmlParts/header.php");?>
     	<div>
-    		<h1>WELCOME IN LEVEL 15</h1>
-    		<p>Do you know password?</p>
-    	</div>
+    		<h1>WELCOME IN LEVEL 6</h1>
+        </div>
+        <p>some email meme here</p>
         <div>
-         <!--https://www.gre.ac.uk/it-and-library/itsecurity/infosec/university-passwords/examples-of-bad-passwords-->
            <form class="mui-form--inline" action= "../index.php" method="GET">
            		<div class="mui-textfield">
       				<input type="password" name="pass">
