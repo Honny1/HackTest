@@ -1,0 +1,12 @@
+<?php 
+    // Here we must enter variables for connection to database
+    $servername = "localhost";
+	$username = "****";
+    $password= "*****";
+    $dbname = "hackTest2K19";
+
+    $db = new mysqli($servername,$username,$password,$dbname); 
+    if($db->connect_error){
+        die($db->connect_error); }
+    $db -> set_charset("UTF8") or die("Spatne kodovani!");
+?>
