@@ -35,7 +35,7 @@
         this.distanceMeter = null;
         this.distanceRan = 0;
 
-        this.highestScore = 50;
+        this.highestScore = 0;
 
         this.time = 0;
         this.runningTime = 0;
@@ -794,8 +794,8 @@
                 this.distanceMeter.setHighScore(this.highestScore);
             }
             //show pass
-            if(this.highestScore>1569){
-                    alert("password: email");
+            if(Math.ceil(this.distanceRan)>1569*40){
+                    alert("password: mail");
             }
 
             // Reset the time clock.

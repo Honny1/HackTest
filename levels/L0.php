@@ -1,4 +1,4 @@
-+<?php include_once("htmlParts/header.php");?>
+<?php include_once("htmlParts/header.php");?>
     	<div>
     		<h1>WELCOME IN LEVEL 15</h1>
     		<p>Do you know password?</p>

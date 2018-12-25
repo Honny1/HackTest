@@ -1,8 +1,13 @@
-<?php include_once("htmlParts/header.php");?>
+<?php
+    include_once("htmlParts/header.php");
+    require ("sendEmail/sendEmail.php");
+    echo getUserEmail($_SESSION['login_user']);
+    sendEmail(getUserEmail($_SESSION['login_user']));
+?>
     	<div>
     		<h1>WELCOME IN LEVEL 6</h1>
         </div>
-        <p>some email meme here</p>
+        <img src="../images/meme2.png">
         <div>
            <form class="mui-form--inline" action= "../index.php" method="GET">
            		<div class="mui-textfield">
@@ -13,5 +18,6 @@
       			<input class="mui-btn mui-btn--flat" type="submit" value="Confirm">
     		</form>
   			<br><br>
-  		</div>
+        </div>
+        <a href="sendEmail/newEmail.php?user=<?php echo $_SESSION['login_user']?>">Need use another email?</a>
 <?php include_once("htmlParts/footer.php");?>

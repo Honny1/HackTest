@@ -5,6 +5,6 @@
       	<p>
         <a href="http://purkiada.sspbrno.cz/rocnik2019/">Zpět na rozcestník</a>
       	</p>    
-    	<p>By: Jan Rodák</p>
+    	<p>By: Hony</p>
   </body>
 </html>
