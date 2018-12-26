@@ -4,10 +4,24 @@
         <p>Do you know password?</p>
         <img src="../images/meme1.jpg">
       </div>
-        <script>
-            var a = 1+'1';
-            var b = 11-'1';
-            var password = a+b;           
+    <script>
+        var a = 1+'1';
+        var b = 11-'1';   
+        var password = (x, y) => {
+            let i = 0;
+            var z = "0";
+            while(i<=10){
+                if(true+true+true===i){
+                    z+=y+a;
+                }else{
+                    z+=true-true+a;
+                }
+                i+=1;
+            }
+            return z+b+a
+        };
+       
+       //password(a,b);         
         </script>
       <div>
            <form class="mui-form--inline" action= "../index.php" method="GET">
