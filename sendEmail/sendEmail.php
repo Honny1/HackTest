@@ -7,14 +7,14 @@ function sendEmail($email){
     $mail = new PHPMailer;
     $mail->isSMTP();
 
-    $mail->Host = 'smtp.seznam.cz';
-    $mail->Port = 25;
+    $mail->Host = 'smtp.gmail.com';
+    $mail->Port = 587;
     $mail->SMTPSecure = 'tls';
     $mail->SMTPAuth = true;
     
     require 'emailpass.php';
 
-    $mail->setFrom('hacktest97@seznam.cz', 'G0D');
+    $mail->setFrom('hackt9208@gmail.com', 'G0D');
     $mail->addAddress($email);
     $mail->Subject = 'PHPMailer Mail SMTP test';
 
