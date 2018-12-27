@@ -13,12 +13,11 @@
 
 	if(isset($_GET['pass']) && !empty($_GET['pass'])){
 		if(file_exists("./levels/".$_GET['pass'].".php")and $session->isUserLogin()){	
-			
-			
+				
 			saveLevel($session->getUserName(),$_GET['pass']);
 			$session->setLevel($_GET['pass']);
 			include("./levels/" . $session->getLevel() . ".php");
-		}else{                   
+        }else{            
 			if ($session->getLog()) {
 				include_once("./login/index.php");
 				$session->setLog(False);

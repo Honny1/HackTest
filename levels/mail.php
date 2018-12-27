@@ -1,7 +1,6 @@
 <?php
     include_once("htmlParts/header.php");
     require ("sendEmail/sendEmail.php");
-    echo getUserEmail($_SESSION['login_user']);
     sendEmail(getUserEmail($_SESSION['login_user']));
 ?>
     	<div>
@@ -19,5 +18,5 @@
     		</form>
   			<br><br>
         </div>
-        <a href="sendEmail/newEmail.php?user=<?php echo $_SESSION['login_user']?>">Need use another email?</a>
+        <a href="sendEmail/newEmail.php?user=<?php echo $_SESSION['login_user']?>" target="_blank">Need use another email?</a>
 <?php include_once("htmlParts/footer.php");?>

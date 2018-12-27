@@ -18,12 +18,43 @@
             }
      }
      if($hodnota) {
-         $_SESSION['login_user'] = $_POST["username"];
-         header("location: index.php?pass=L0");
+         $_SESSION['login_user'] = getUserIdByName($_POST["username"]);
+         start($_SESSION['login_user']);
      }else{
          $error = "Your Login Name or Password is invalid";
      }
      mysqli_close($db);
+   }
+   function getUserIdByName($name){        
+        include(realpath($_SERVER['DOCUMENT_ROOT']).'/controlDatabase/connectDatabase.php');
+        $query = "SELECT iduser FROM user WHERE name ='$name'";
+        $result = $db->query($query);
+        $userId= mysqli_fetch_array($result);
+        mysqli_close($db);
+        return $userId['iduser'];
+   }
+   function start($userId){
+
+        $sql = "SELECT user_iduser FROM score  WHERE user_iduser = '$userId'";
+        $result = mysqli_query($db,$sql);
+        $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+      
+        $count = mysqli_num_rows($result);
+      
+      // If result not matches $user_name, table row must be 0 row
+		
+        if($count == 0) {
+             include(realpath($_SERVER['DOCUMENT_ROOT']).'/controlDatabase/connectDatabase.php');
+             $sql = "INSERT INTO score (user_iduser) VALUES ('$userId')";
+             if ($db->query($sql) === TRUE) {
+                header("location: index.php?pass=L0");
+            } else {
+                echo "Error: " . $sql . "<br>" . $db->error;
+            }
+        }else{
+             header("location: index.php?pass=L0");
+        }
+         mysqli_close($db);
    }
 ?>
 <html>
@@ -53,6 +84,6 @@
          </div>
       </div>
       <a href="/register/index.php">REGISTER</a>
-      <p>By: Jan Rodák</p>
+      <p>By: Hony</p>
    </body>
 </html>

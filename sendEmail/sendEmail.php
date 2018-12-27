@@ -18,15 +18,15 @@ function sendEmail($email){
     $mail->addAddress($email);
     $mail->Subject = 'PHPMailer Mail SMTP test';
 
-    $mail->Body = 'password: test';
+    $mail->Body = 'password: ThisIsNotAPassword';
 
     if (!$mail->send()) {
         echo "Mailer Error: " . $mail->ErrorInfo;
     }
 }
-function getUserEmail($user_name){
+function getUserEmail($userId){
      include(realpath($_SERVER['DOCUMENT_ROOT']).'/controlDatabase/connectDatabase.php');
-     $sql = "SELECT email FROM user WHERE name = '$user_name'";
+     $sql = "SELECT email FROM user WHERE iduser = '$userId'";
      $result = mysqli_query($db,$sql);
      $email= mysqli_fetch_array($result);
      mysqli_close($db);

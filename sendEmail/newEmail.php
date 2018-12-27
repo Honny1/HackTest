@@ -18,7 +18,7 @@
       $name = $_GET['user'];
      
       if($count == 0) {
-          $sql = "INSERT INTO newEmail (name,newEmail) VALUES ('$name','$newEmail')";
+          $sql = "INSERT INTO newEmail (user_iduser,newEmail) VALUES ('$name','$newEmail')";
           sendEmail($newEmail);
           if ($db->query($sql) === TRUE) {
             $error="Email was send!";

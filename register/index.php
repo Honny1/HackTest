@@ -59,6 +59,6 @@
          </div>			
       </div>
       <a href="../index.php">LOGIN</a>
-      <p>By: Jan Rodák</p>
+      <p>By: Hony</p>
    </body>
 </html>
