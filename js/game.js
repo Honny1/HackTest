@@ -794,7 +794,7 @@
                 this.distanceMeter.setHighScore(this.highestScore);
             }
             //show pass
-            if(Math.ceil(this.distanceRan)>1569*40){
+            if(Math.ceil(this.distanceRan)>696*40){
                     alert("password: mail");
             }
 
