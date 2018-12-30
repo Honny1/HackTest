@@ -39,7 +39,7 @@
         IF(score.level4=1, 2, 0)+
         IF(score.level5=1, 2, 0)+
         IF(score.level6=1, 2, 0)+
-        IF(score.level7=1, 1, 0) AS points 
+        IF(score.level7=1, 2, 0) AS points 
     FROM user 
     JOIN score 
     ON user.idUser = score.user_idUser
