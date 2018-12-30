@@ -34,16 +34,12 @@
         return $userId['iduser'];
    }
    function start($userId){
-
-        $sql = "SELECT user_iduser FROM score  WHERE user_iduser = '$userId'";
-        $result = mysqli_query($db,$sql);
-        $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      
-        $count = mysqli_num_rows($result);
-      
-      // If result not matches $user_name, table row must be 0 row
-		
-        if($count == 0) {
+        include(realpath($_SERVER['DOCUMENT_ROOT']).'/controlDatabase/connectDatabase.php');
+        $query = " SELECT count(*) AS 'count' FROM score  WHERE user_iduser = '$userId'";
+        $result = $db->query($query);
+        $count = mysqli_fetch_array($result);
+        mysqli_close($db);
+        if($count['count'] == 0) {
              include(realpath($_SERVER['DOCUMENT_ROOT']).'/controlDatabase/connectDatabase.php');
              $sql = "INSERT INTO score (user_iduser) VALUES ('$userId')";
              if ($db->query($sql) === TRUE) {

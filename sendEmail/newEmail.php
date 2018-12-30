@@ -6,18 +6,13 @@
    $error="";
    
    if($_SERVER["REQUEST_METHOD"] == "POST") { 
-        
       $newEmail = mysqli_real_escape_string($db,$_POST['newEmail']); 
-      $sql = "SELECT id FROM user WHERE email = '$newEmail'";
-      $result = mysqli_query($db,$sql);
-      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      
-      $count = mysqli_num_rows($result);
-      
-      // If result not matches $user_name, table row must be 0 row
-      $name = $_GET['user'];
-     
-      if($count == 0) {
+      $name = mysqli_real_escape_string($db,$_GET['user']);
+      $sql = " SELECT count(*) AS 'count' FROM user  WHERE email = '$newEmail'";
+      $result = $db->query($sql);
+      $count = mysqli_fetch_array($result);
+
+        if($count['count'] == 0) {
           $sql = "INSERT INTO newEmail (user_iduser,newEmail) VALUES ('$name','$newEmail')";
           sendEmail($newEmail);
           if ($db->query($sql) === TRUE) {
@@ -30,7 +25,7 @@
          }
       mysqli_close($db);
       }
-   
+
 ?>
 <html>
    
@@ -40,6 +35,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href="//cdn.muicss.com/mui-0.9.41/css/mui.min.css" rel="stylesheet" type="text/css" />
       <script src="//cdn.muicss.com/mui-0.9.41/js/mui.min.js"></script> 
+      <link rel="shortcut icon" type="image/png" href="../images/favicon.png"/>
       <link rel="stylesheet" type="text/css" href="../css/style.css">  
    </head>
    
@@ -57,6 +53,6 @@
             </div>				
          </div>
       </div>
-      <p>By: Jan Rodák</p>
+      <p>By: Hony</p>
    </body>
 </html>
