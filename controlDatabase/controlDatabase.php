@@ -5,11 +5,12 @@ function saveLevel($idUser,$pass){
       "L0" =>                                      "level0",
       "1qaz2wsx" =>                                "level1",
       "5e4i3t2" =>                                 "level2",
-      "instruction-pointer" =>                     "level3",
-      "001101101110110110110110110110110111011" => "level4",
-      "mail" =>                                    "level5",
-      "ThisIsNotAPassword" =>                      "level6",
-      "end" =>                                     "level7"
+      "unicornsarereal"=>                          "level3",
+      "instruction-pointer" =>                     "level4",
+      "001101101110110110110110110110110111011" => "level5",
+      "mail" =>                                    "level6",
+      "ThisIsNotAPassword" =>                      "level7",
+      "end" =>                                     "level8"
       );
   $level=$passTolevel[$pass];
   $sql = "UPDATE score

@@ -4,22 +4,25 @@
         <p>Do you know password?</p>
         <img src="../images/meme1.jpg">
       </div>
-    <script>
-        var a = 1+'1';
-        var b = 11-'1';   
+      <script>
+        //https://developers.google.com/web/tools/chrome-devtools/console/ 
+
         var password = (x, y) => {
             let i = 0;
             var z = "0";
             while(i<=10){
                 if(true+true+true===i){
-                    z+=y+a;
+                    z+=y+x;
                 }else{
-                    z+=true-true+a;
+                    z+=true-true+x;
                 }
                 i+=1;
             }
-            return z+b+a
+            return z+b+x
         };
+
+        var a = 1+'1';
+        var b = 11-'1';   
        
        //password(a,b);         
         </script>

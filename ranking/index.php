@@ -17,7 +17,8 @@
     <th>LEVEL 4</th>
     <th>LEVEL 5</th> 
     <th>LEVEL 6</th>
-    <th>LEVEL 7</th> 
+    <th>LEVEL 7</th>
+    <th>LEVEL 8</th> 
     <th>POINTS</th>	
   </tr>
 <?php 
@@ -32,14 +33,16 @@
         IF(score.level5=1, 2, 0) AS level5,
         IF(score.level6=1, 2, 0) AS level6,
         IF(score.level7=1, 2, 0) AS level7,
-    
+        IF(score.level8=1, 2, 0) AS level8,
+
  	    IF(score.level1=1, 2, 0)+
         IF(score.level2=1, 2, 0)+
         IF(score.level3=1, 2, 0)+
         IF(score.level4=1, 2, 0)+
         IF(score.level5=1, 2, 0)+
         IF(score.level6=1, 2, 0)+
-        IF(score.level7=1, 2, 0) AS points 
+        IF(score.level7=1, 2, 0)+
+        IF(score.level8=1, 2, 0) AS points 
     FROM user 
     JOIN score 
     ON user.idUser = score.user_idUser
@@ -60,6 +63,7 @@
                 <td>".$row['level5']."</td>	
                 <td>".$row['level6']."</td>
                 <td>".$row['level7']."</td>
+                <td>".$row['level8']."</td>
     		    <td>".$row['points']."</td>
 		      </tr>";
         }
