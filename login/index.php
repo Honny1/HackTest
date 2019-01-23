@@ -82,6 +82,8 @@
          </div>
       </div>
       <br/>
+      <a href="http://purkiada.sspbrno.cz/Matrix10/">BACK TO /HOME</a>
+        <br/>
       <a href="/register/index.php">REGISTER</a>
       <p>By: Hony</p>
    </body>

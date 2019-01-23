@@ -3,5 +3,8 @@
     		<h1>WELCOME IN LEVEL 2</h1>
     		<img src="../images/meme0.jpg">
     	</div>
-        <!--řečiště-->
+        <!--
+            P59li3 6lutou4k7 k;n...
+            Heslo: řečiště
+        -->
 <?php include_once("htmlParts/footer.php");?>

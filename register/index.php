@@ -10,18 +10,18 @@
       $password = mysqli_real_escape_string($db,$_POST['password']);
       $email = mysqli_real_escape_string($db,$_POST['email']);  
       
-      $sql = "SELECT id FROM user WHERE name = '$user_name'";
+   
+      $sql = "SELECT COUNT( * ) count FROM `user` GROUP BY name HAVING name = '$user_name'";
       $result = mysqli_query($db,$sql);
-      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      
-      $count = mysqli_num_rows($result);
-      
+      $data= mysqli_fetch_array($result);
+      $count =$data['count'];
+
       // If result not matches $user_name, table row must be 0 row
-		
+
       if($count == 0) {
          $sql = "INSERT INTO user (name,pass,email) VALUES ('$user_name','$password','$email')";
          if ($db->query($sql) === TRUE) {
-            header("location: ../index.php");
+             header("location: ../index.php");
          } else {
             echo "Error: " . $sql . "<br>" . $db->error;
          }
@@ -49,7 +49,8 @@
          <div style = "width:300px; border: solid 1px #000000; " align = "left">
             <div style = "background-color:#000000; color:#FFFFFF; padding:3px;"><b>Register</b></div>
             <div style = "margin:30px">
-               <form class="mui-form--inline" action = "" method = "post">
+            <p style ="color:#ff0000;"align="center">POZOR!!!<br/> Použij skutečný email a heslo/a které nepoužíváš normálně(neco jako 1234 je  ideál) :D</p>
+                <form class="mui-form--inline" action = "" method = "post">
                   <label>UserName:</label><div class="mui-textfield"><input type = "text" name = "username" class = "box" required/></div><br /><br />
                   <label>Password:</label><div class="mui-textfield"><input type = "password" name = "password" class = "box" required/></div><br/><br />
                   <label>Email:</label><div class="mui-textfield"><input type = "text" name = "email" class = "box" required/></div><br/><br />
@@ -59,6 +60,9 @@
             </div>				
          </div>			
       </div>
+      <br/> 
+      <a href="http://purkiada.sspbrno.cz/Matrix10/">BACK TO /HOME</a>
+      <br/>
       <a href="../index.php">LOGIN</a>
       <p>By: Hony</p>
    </body>
