@@ -35,14 +35,14 @@
         IF(score.level7=1, 2, 0) AS level7,
         IF(score.level8=1, 2, 0) AS level8,
 
- 	    IF(score.level1=1, 2, 0)+
+ 	    IF(score.level1=1, 1, 0)+
         IF(score.level2=1, 2, 0)+
-        IF(score.level3=1, 2, 0)+
-        IF(score.level4=1, 2, 0)+
-        IF(score.level5=1, 2, 0)+
-        IF(score.level6=1, 2, 0)+
-        IF(score.level7=1, 2, 0)+
-        IF(score.level8=1, 2, 0) AS points 
+        IF(score.level3=1, 3, 0)+
+        IF(score.level4=1, 3, 0)+
+        IF(score.level5=1, 3, 0)+
+        IF(score.level6=1, 3, 0)+
+        IF(score.level7=1, 3, 0)+
+        IF(score.level8=1, 3, 0) AS points 
     FROM user 
     JOIN score 
     ON user.idUser = score.user_idUser
