@@ -43,8 +43,8 @@
         IF(score.level6=1, 3, 0)+
         IF(score.level7=1, 3, 0)+
         IF(score.level8=1, 3, 0) AS points 
-    FROM user 
-    JOIN score 
+    FROM score 
+    RIGHT JOIN user 
     ON user.idUser = score.user_idUser
     ";
 
