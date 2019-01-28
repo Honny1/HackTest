@@ -26,14 +26,14 @@
     $sql = "
     SELECT user.name,
         IF(score.level0=1, 'YES', 'NO') AS loggedIn,
-        IF(score.level1=1, 2, 0) AS level1,
-        IF(score.level2=1, 2, 0) AS level2,
+        IF(score.level1=1, 1, 0) AS level1,
+        IF(score.level2=1, 1, 0) AS level2,
         IF(score.level3=1, 2, 0) AS level3,
         IF(score.level4=1, 2, 0) AS level4,
         IF(score.level5=1, 2, 0) AS level5,
-        IF(score.level6=1, 2, 0) AS level6,
-        IF(score.level7=1, 2, 0) AS level7,
-        IF(score.level8=1, 2, 0) AS level8,
+        IF(score.level6=1, 3, 0) AS level6,
+        IF(score.level7=1, 3, 0) AS level7,
+        IF(score.level8=1, 3, 0) AS level8,
 
  	    IF(score.level1=1, 1, 0)+
         IF(score.level2=1, 1, 0)+
