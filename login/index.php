@@ -12,7 +12,7 @@
      $hodnota=False;
      if (mysqli_num_rows($result)>0){
 	        while($row = mysqli_fetch_assoc($result)){
-                if ($row["name"]==$_POST["username"] && $row["pass"]==$_POST["password"]) {
+                if ($row["name"]==strval($_POST["username"]) && $row["pass"]==strval($_POST["password"])) {
 			        $hodnota = true;
                 }
             }
