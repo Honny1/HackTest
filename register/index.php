@@ -44,7 +44,7 @@
    </head>
    
    <body>
-      <h1>WELCOME IN REGISTRATION FOR HACK_TEST_2K19</h1>
+      <h1>WELCOME TO THE  REGISTRATION FOR HACK_TEST_2K19</h1>
       <div align = "center">
          <div style = "width:300px; border: solid 1px #000000; " align = "left">
             <div style = "background-color:#000000; color:#FFFFFF; padding:3px;"><b>Register</b></div>

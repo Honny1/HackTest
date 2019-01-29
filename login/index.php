@@ -66,7 +66,7 @@
    </head>
    
    <body>
-      <h1>WELCOME IN HACK_TEST_2K19</h1>
+      <h1>WELCOME TO THE HACK_TEST_2K19</h1>
      <p> Do you know what's waiting for you?<br/><a href="https://www.youtube.com/watch?v=91TCgj_pQ98" target="_blank" >Here's a little tasting.</a></p>
       <div align = "center" style = "background-color:">
          <div style = "width:300px; border: solid 1px #000000; " align = "left">

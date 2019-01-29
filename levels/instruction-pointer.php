@@ -1,6 +1,6 @@
 <?php include_once("htmlParts/header.php");?>
       <div>
-        <h1>WELCOME IN LEVEL++</h1>
+        <h1>WELCOME TO THE LEVEL++</h1>
         <p>Do you know password?</p>
         <img src="../images/meme1.jpg">
       </div>
@@ -24,7 +24,7 @@
         var a = 1+'1';
         var b = 11-'1';   
        
-       //password(a,b);         
+       password(a,b);         
         </script>
       <div>
            <form class="mui-form--inline" action= "../index.php" method="GET">

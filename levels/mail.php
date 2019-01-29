@@ -4,7 +4,7 @@
     sendEmail(getUserEmail($_SESSION['login_user']));
 ?>
     	<div>
-    		<h1>WELCOME IN LEVEL 6</h1>
+    		<h1>WELCOME TO THE LEVEL 6</h1>
         </div>
         <img src="../images/meme2.png">
         <div>

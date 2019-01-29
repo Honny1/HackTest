@@ -1,6 +1,6 @@
 <?php include_once("htmlParts/header.php");?>
         <canvas id="metrix">       
-        <!--WELCOME IN METRIX--> 
+        <!--WELCOME TO THE METRIX--> 
         </canvas>
         <script>
         var c = document.getElementById("metrix");
