@@ -18,5 +18,6 @@
  <div style="align-items: center;
                 text-align: center;">
         <H1>Can you beat me?</H1>
+        <H5>Press the spacebar for start!!!</H5>
 <?php include_once("htmlParts/footer.php");?> 
 </div> 
