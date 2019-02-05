@@ -53,7 +53,7 @@
                 <form class="mui-form--inline" action = "" method = "post">
                   <label>UserName:</label><div class="mui-textfield"><input type = "text" name = "username" class = "box" required/></div><br /><br />
                   <label>Password:</label><div class="mui-textfield"><input type = "password" name = "password" class = "box" required/></div><br/><br />
-                  <label>Email:</label><div class="mui-textfield"><input type = "text" name = "email" class = "box" required/></div><br/><br />
+                  <label>Email:</label><div class="mui-textfield"><input type = "email" name = "email" class = "box" required/></div><br/><br />
                   <input class="mui-btn mui-btn--flat" type = "submit" value = "Confirm"/><br />
                </form>
                <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>					
