@@ -1,7 +1,7 @@
 <?php
 
-   include(realpath($_SERVER['DOCUMENT_ROOT']).'/controlDatabase/connectDatabase.php');
-   include_once(realpath($_SERVER['DOCUMENT_ROOT']).'/sessions/Session.class.php');
+   include('../controlDatabase/connectDatabase.php');
+   include_once('../sessions/Session.class.php');
    require('sendEmail.php');
    $error="";
    

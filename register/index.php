@@ -1,6 +1,6 @@
 <?php
 
-   include(realpath($_SERVER['DOCUMENT_ROOT']).'/controlDatabase/connectDatabase.php');
+   include('../controlDatabase/connectDatabase.php');
    $error="";
    
    if($_SERVER["REQUEST_METHOD"] == "POST") {

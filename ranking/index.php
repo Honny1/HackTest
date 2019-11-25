@@ -22,7 +22,7 @@
     <th>POINTS</th>	
   </tr>
 <?php 
-    include(realpath($_SERVER['DOCUMENT_ROOT']).'/controlDatabase/connectDatabase.php');
+    include('../controlDatabase/connectDatabase.php');
     $sql = "
     SELECT user.name,
         IF(score.level0=1, 'YES', 'NO') AS loggedIn,

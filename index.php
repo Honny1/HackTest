@@ -1,7 +1,7 @@
 <?php
 	//This part control Leves by name levels and save user progress to db
-	include_once(realpath($_SERVER['DOCUMENT_ROOT']).'/sessions/Session.class.php');
-	include(realpath($_SERVER['DOCUMENT_ROOT']).'/controlDatabase/controlDatabase.php');
+	include_once('./sessions/Session.class.php');
+	include('./controlDatabase/controlDatabase.php');
     
     $session = new Session();
 	

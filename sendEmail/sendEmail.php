@@ -25,7 +25,7 @@ function sendEmail($email){
     }
 }
 function getUserEmail($userId){
-     include(realpath($_SERVER['DOCUMENT_ROOT']).'/controlDatabase/connectDatabase.php');
+     include('./controlDatabase/connectDatabase.php');
      $sql = "SELECT email FROM user WHERE iduser = '$userId'";
      $result = mysqli_query($db,$sql);
      $email= mysqli_fetch_array($result);

@@ -25,7 +25,7 @@ class Session {
 	}
 
 	public function getUserName(){
-		include($_SERVER['DOCUMENT_ROOT']."/controlDatabase/connectDatabase.php");
+		include("../controlDatabase/connectDatabase.php");
         $idUser = $_SESSION['login_user'];
         $query = "SELECT iduser FROM user WHERE iduser ='$idUser'";
         $result = $db->query($query);

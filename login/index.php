@@ -1,7 +1,7 @@
 <?php
 
-   include(realpath($_SERVER['DOCUMENT_ROOT']).'/controlDatabase/connectDatabase.php');
-   include_once(realpath($_SERVER['DOCUMENT_ROOT']).'/sessions/Session.class.php');
+   include('../controlDatabase/connectDatabase.php');
+   include_once('../sessions/Session.class.php');
 
    $error="";
    
@@ -26,7 +26,7 @@
      mysqli_close($db);
    }
    function getUserIdByName($name){        
-        include(realpath($_SERVER['DOCUMENT_ROOT']).'/controlDatabase/connectDatabase.php');
+        include('../controlDatabase/connectDatabase.php');
         $query = "SELECT iduser FROM user WHERE name ='$name'";
         $result = $db->query($query);
         $userId= mysqli_fetch_array($result);
@@ -34,13 +34,13 @@
         return $userId['iduser'];
    }
    function start($userId){
-        include(realpath($_SERVER['DOCUMENT_ROOT']).'/controlDatabase/connectDatabase.php');
+        include('../controlDatabase/connectDatabase.php');
         $query = " SELECT count(*) AS 'count' FROM score  WHERE user_iduser = '$userId'";
         $result = $db->query($query);
         $count = mysqli_fetch_array($result);
         mysqli_close($db);
         if($count['count'] == 0) {
-             include(realpath($_SERVER['DOCUMENT_ROOT']).'/controlDatabase/connectDatabase.php');
+             include('../controlDatabase/connectDatabase.php');
              $sql = "INSERT INTO score (user_iduser) VALUES ('$userId')";
              if ($db->query($sql) === TRUE) {
                 header("location: index.php?pass=L0");
