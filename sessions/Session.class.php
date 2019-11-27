@@ -25,7 +25,7 @@ class Session {
 	}
 
 	public function getUserName(){
-		include("../controlDatabase/connectDatabase.php");
+		include("controlDatabase/connectDatabase.php");
         $idUser = $_SESSION['login_user'];
         $query = "SELECT iduser FROM user WHERE iduser ='$idUser'";
         $result = $db->query($query);
@@ -33,7 +33,7 @@ class Session {
         
    
    		if(!isset($_SESSION['login_user'])){
-   			header("location:index.php");
+   			header("location: index.php");
    		}
    		mysqli_close($db);
    		return $userId['iduser'];

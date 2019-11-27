@@ -7,16 +7,16 @@ function sendEmail($email){
     $mail = new PHPMailer;
     $mail->isSMTP();
 
-    $mail->Host = 'smtp.gmail.com';
-    $mail->Port = 587;
-    $mail->SMTPSecure = 'tls';
+    $mail->Host = 'smtp.seznam.cz';
+    $mail->Port = 465;
+    $mail->SMTPSecure = 'ssl';
     $mail->SMTPAuth = true;
     
     require 'emailpass.php';
 
-    $mail->setFrom('hackt9208@gmail.com', 'G0D');
+    $mail->setFrom('hacktest19@purkynka.com', 'Hacktest | Purkiada 2019');
     $mail->addAddress($email);
-    $mail->Subject = 'PHPMailer Mail SMTP test';
+    $mail->Subject = 'HESLO, o ktere bojujes!';
 
     $mail->Body = 'password: ThisIsNotAPassword';
 

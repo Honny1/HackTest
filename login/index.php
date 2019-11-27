@@ -1,7 +1,6 @@
 <?php
-
-   include('../controlDatabase/connectDatabase.php');
-   include_once('../sessions/Session.class.php');
+   include('controlDatabase/connectDatabase.php');
+   include_once('sessions/Session.class.php');
 
    $error="";
    
@@ -26,7 +25,7 @@
      mysqli_close($db);
    }
    function getUserIdByName($name){        
-        include('../controlDatabase/connectDatabase.php');
+        include('controlDatabase/connectDatabase.php');
         $query = "SELECT iduser FROM user WHERE name ='$name'";
         $result = $db->query($query);
         $userId= mysqli_fetch_array($result);
@@ -34,13 +33,13 @@
         return $userId['iduser'];
    }
    function start($userId){
-        include('../controlDatabase/connectDatabase.php');
+        include('controlDatabase/connectDatabase.php');
         $query = " SELECT count(*) AS 'count' FROM score  WHERE user_iduser = '$userId'";
         $result = $db->query($query);
         $count = mysqli_fetch_array($result);
-        mysqli_close($db);
+        $db->close();
         if($count['count'] == 0) {
-             include('../controlDatabase/connectDatabase.php');
+             include('controlDatabase/connectDatabase.php');
              $sql = "INSERT INTO score (user_iduser) VALUES ('$userId')";
              if ($db->query($sql) === TRUE) {
                 header("location: index.php?pass=L0");
@@ -59,15 +58,15 @@
       <title>HACK_TEST_2K19</title>
       <meta http-equiv="content-type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href="/css/mui.min.css" rel="stylesheet" type="text/css" />
-      <script src="/js/mui.min.js"></script> 
+      <link href="css/mui.min.css" rel="stylesheet" type="text/css" />
+      <script src="js/mui.min.js"></script> 
       <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
       <link rel="stylesheet" type="text/css" href="css/style.css">  
    </head>
    
    <body>
       <h1>WELCOME TO THE HACK_TEST_2K19</h1>
-     <p> Do you know what's waiting for you?<br/><a href="https://www.youtube.com/watch?v=91TCgj_pQ98" target="_blank" >Here's a little tasting.</a></p>
+     <p> Do you know what's waiting for you?<br/><a href="//www.youtube.com/watch?v=91TCgj_pQ98" target="_blank" >Here's a little tasting.</a></p>
       <div align = "center" style = "background-color:">
          <div style = "width:300px; border: solid 1px #000000; " align = "left">
             <div style = "background-color:#000000; color:#FFFFFF; padding:3px;"><b>Login</b></div>
@@ -82,9 +81,9 @@
          </div>
       </div>
       <br/>
-      <a href="http://purkiada.sspbrno.cz/Matrix10/">BACK TO /HOME</a>
+      <a href="/matrix10">BACK TO /HOME</a>
         <br/>
-      <a href="/register/index.php">REGISTER</a>
+      <a href="register">REGISTER</a>
       <p>By: Hony</p>
    </body>
 </html>

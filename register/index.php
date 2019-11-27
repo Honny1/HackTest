@@ -1,20 +1,19 @@
 <?php
-
    include('../controlDatabase/connectDatabase.php');
    $error="";
    
    if($_SERVER["REQUEST_METHOD"] == "POST") {
       // user_name, password and email sent from form 
       
-      $user_name = mysqli_real_escape_string($db,$_POST['username']);
-      $password = mysqli_real_escape_string($db,$_POST['password']);
-      $email = mysqli_real_escape_string($db,$_POST['email']);  
+      $user_name = $db->real_escape_string($_POST['username']);
+      $password = $db->real_escape_string($_POST['password']);
+      $email = $db->real_escape_string($_POST['email']);  
       
    
       $sql = "SELECT COUNT( * ) count FROM `user` GROUP BY name HAVING name = '$user_name'";
-      $result = mysqli_query($db,$sql);
-      $data= mysqli_fetch_array($result);
-      $count =$data['count'];
+      $result = $db->query($sql);
+      $data = $result->fetch_array();
+      $count = $data['count'];
 
       // If result not matches $user_name, table row must be 0 row
 
@@ -28,7 +27,7 @@
       }else {
          $error = "Your Login Name is used";
          }
-      mysqli_close($db);
+      $db->close();
       }
 ?>
 <html>

@@ -2,7 +2,7 @@
       <div>
         <h1>WELCOME TO THE LEVEL++</h1>
         <p>Do you know password?</p>
-        <img src="../images/meme1.jpg">
+        <img src="./images/meme1.jpg">
       </div>
       <script>
         //https://developers.google.com/web/tools/chrome-devtools/console/ 
@@ -27,7 +27,7 @@
        password(a,b);         
         </script>
       <div>
-           <form class="mui-form--inline" action= "../index.php" method="GET">
+           <form class="mui-form--inline" action= "index.php" method="GET">
               <div class="mui-textfield">
               <input type="password" name="pass">
             </div>
