@@ -4,7 +4,7 @@
         </div>
             <p>----[-->+++++<]>-.-------.-----.------.++++++++++++.+++.----.+++++.++[->+++<]>++.--[--->+<]>---.-------------.+++++++++++++.-------------.----.+++++++++++.</p>
         <div>
-           <form class="mui-form--inline" action= "../index.php" method="GET">
+           <form class="mui-form--inline" action= "./index.php" method="GET">
            		<div class="mui-textfield">
       				<input type="password" name="pass">
       			</div>

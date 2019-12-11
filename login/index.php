@@ -1,7 +1,6 @@
 <?php
-
-   include(realpath($_SERVER['DOCUMENT_ROOT']).'/controlDatabase/connectDatabase.php');
-   include_once(realpath($_SERVER['DOCUMENT_ROOT']).'/sessions/Session.class.php');
+   include('./controlDatabase/connectDatabase.php');
+   include_once('./sessions/Session.class.php');
 
    $error="";
    
@@ -26,7 +25,7 @@
      mysqli_close($db);
    }
    function getUserIdByName($name){        
-        include(realpath($_SERVER['DOCUMENT_ROOT']).'/controlDatabase/connectDatabase.php');
+        include('./controlDatabase/connectDatabase.php');
         $query = "SELECT iduser FROM user WHERE name ='$name'";
         $result = $db->query($query);
         $userId= mysqli_fetch_array($result);
@@ -34,13 +33,13 @@
         return $userId['iduser'];
    }
    function start($userId){
-        include(realpath($_SERVER['DOCUMENT_ROOT']).'/controlDatabase/connectDatabase.php');
+        include('./controlDatabase/connectDatabase.php');
         $query = " SELECT count(*) AS 'count' FROM score  WHERE user_iduser = '$userId'";
         $result = $db->query($query);
         $count = mysqli_fetch_array($result);
         mysqli_close($db);
         if($count['count'] == 0) {
-             include(realpath($_SERVER['DOCUMENT_ROOT']).'/controlDatabase/connectDatabase.php');
+             include('./controlDatabase/connectDatabase.php');
              $sql = "INSERT INTO score (user_iduser) VALUES ('$userId')";
              if ($db->query($sql) === TRUE) {
                 header("location: index.php?pass=L0");
@@ -59,10 +58,10 @@
       <title>HACK_TEST_2K19</title>
       <meta http-equiv="content-type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href="/css/mui.min.css" rel="stylesheet" type="text/css" />
-      <script src="/js/mui.min.js"></script> 
-      <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
-      <link rel="stylesheet" type="text/css" href="css/style.css">  
+      <link href="./css/mui.min.css" rel="stylesheet" type="text/css" />
+      <script src="./js/mui.min.js"></script> 
+      <link rel="shortcut icon" type="image/png" href="./images/favicon.png"/>
+      <link rel="stylesheet" type="text/css" href="./css/style.css">  
    </head>
    
    <body>
@@ -84,7 +83,7 @@
       <br/>
       <a href="http://purkiada.sspbrno.cz/Matrix10/">BACK TO /HOME</a>
         <br/>
-      <a href="/register/index.php">REGISTER</a>
+      <a href="./register/index.php">REGISTER</a>
       <p>By: Hony</p>
    </body>
 </html>

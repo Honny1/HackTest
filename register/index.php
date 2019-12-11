@@ -1,6 +1,6 @@
 <?php
 
-   include(realpath($_SERVER['DOCUMENT_ROOT']).'/controlDatabase/connectDatabase.php');
+   include('../controlDatabase/connectDatabase.php');
    $error="";
    
    if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -37,8 +37,8 @@
       <title>HACK_TEST_2K19</title>
       <meta http-equiv="content-type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href="/css/mui.min.css" rel="stylesheet" type="text/css" />
-      <script src="/js/mui.min.js"></script> 
+      <link href="../css/mui.min.css" rel="stylesheet" type="text/css" />
+      <script src="../js/mui.min.js"></script> 
       <link rel="stylesheet" type="text/css" href="../css/style.css">
       <link rel="shortcut icon" type="image/png" href="../images/favicon.png"/>
    </head>

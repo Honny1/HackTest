@@ -6,9 +6,9 @@
     	<div>
     		<h1>WELCOME TO THE LEVEL 6</h1>
         </div>
-        <img src="../images/meme2.png">
+        <img src="./images/meme2.png">
         <div>
-           <form class="mui-form--inline" action= "../index.php" method="GET">
+           <form class="mui-form--inline" action= "./index.php" method="GET">
            		<div class="mui-textfield">
       				<input type="password" name="pass">
       			</div>
