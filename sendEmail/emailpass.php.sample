@@ -1,4 +1,0 @@
- <?php
-     $mail->Username = "example@gmail.com"; 
-     $mail->Password = "examplepass";
-?> 

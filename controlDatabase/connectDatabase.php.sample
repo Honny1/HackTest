@@ -3,7 +3,7 @@
     $servername = "localhost";
 	$username = "****";
     $password= "*****";
-    $dbname = "hackTest2K19";
+    $dbname = "hack_test2020";
 
     $db = new mysqli($servername,$username,$password,$dbname); 
     if($db->connect_error){

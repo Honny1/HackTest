@@ -3,13 +3,13 @@ function saveLevel($idUser,$pass){
   include("connectDatabase.php");
   $passTolevel = array(
       "L0" =>                                      "level0",
-      "1qaz2wsx" =>                                "level1",
-      "5e4i3t2" =>                                 "level2",
-      "unicornsarereal"=>                          "level3",
-      "instruction-pointer" =>                     "level4",
-      "001101101110110110110110110110110111011" => "level5",
-      "mail" =>                                    "level6",
-      "ThisIsNotAPassword" =>                      "level7",
+      "poopybutthole" =>                           "level1",
+      "hidden" =>                                  "level2",
+      "TEA_TIME"=>                                 "level3",
+      "stackoverflow" =>                           "level4",
+      "parameters" =>                              "level5",
+      "level6" =>                                  "level6",
+      "LIDL" =>                                    "level7",
       "end" =>                                     "level8"
       );
   $level=$passTolevel[$pass];

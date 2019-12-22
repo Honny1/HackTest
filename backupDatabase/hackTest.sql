@@ -8,19 +8,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema hackTest2019
+-- Schema hack_test2020
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema hackTest2019
+-- Schema hack_test2020
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `hackTest2019` DEFAULT CHARACTER SET utf8 ;
-USE `hackTest2019` ;
+CREATE SCHEMA IF NOT EXISTS `hack_test2020` DEFAULT CHARACTER SET utf8 ;
+USE `hack_test2020` ;
 
 -- -----------------------------------------------------
--- Table `hackTest2019`.`user`
+-- Table `hack_test2020`.`user`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `hackTest2019`.`user` (
+CREATE TABLE IF NOT EXISTS `hack_test2020`.`user` (
   `idUser` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `pass` VARCHAR(45) NOT NULL,
@@ -30,9 +30,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `hackTest2019`.`score`
+-- Table `hack_test2020`.`score`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `hackTest2019`.`score` (
+CREATE TABLE IF NOT EXISTS `hack_test2020`.`score` (
   `user_idUser` INT NOT NULL,
   `level0` TINYINT NULL,
   `level1` TINYINT NULL,
@@ -46,22 +46,7 @@ CREATE TABLE IF NOT EXISTS `hackTest2019`.`score` (
   INDEX `fk_score_user_idx` (`user_idUser` ASC) VISIBLE,
   CONSTRAINT `fk_score_user`
     FOREIGN KEY (`user_idUser`)
-    REFERENCES `hackTest2019`.`user` (`idUser`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `hackTest2019`.`newEmail`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `hackTest2019`.`newEmail` (
-  `user_idUser` INT NOT NULL,
-  `newEmail` VARCHAR(45) NULL,
-  INDEX `fk_newEmail_user1_idx` (`user_idUser` ASC) VISIBLE,
-  CONSTRAINT `fk_newEmail_user1`
-    FOREIGN KEY (`user_idUser`)
-    REFERENCES `hackTest2019`.`user` (`idUser`)
+    REFERENCES `hack_test2020`.`user` (`idUser`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

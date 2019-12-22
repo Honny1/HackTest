@@ -55,7 +55,7 @@
 <html>
    
    <head>
-      <title>HACK_TEST_2K19</title>
+      <title>HACK_TEST_2020</title>
       <meta http-equiv="content-type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href="./css/mui.min.css" rel="stylesheet" type="text/css" />
@@ -65,8 +65,8 @@
    </head>
    
    <body>
-      <h1>WELCOME TO THE HACK_TEST_2K19</h1>
-     <p> Do you know what's waiting for you?<br/><a href="https://www.youtube.com/watch?v=91TCgj_pQ98" target="_blank" >Here's a little tasting.</a></p>
+      <h1>WELCOME TO THE HACK_TEST</h1>
+     <p> Do you know what's waiting for you?</p>
       <div align = "center" style = "background-color:">
          <div style = "width:300px; border: solid 1px #000000; " align = "left">
             <div style = "background-color:#000000; color:#FFFFFF; padding:3px;"><b>Login</b></div>
