@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../css/w3.css">
-<link rel="shortcut icon" type="image/png" href="../images/favicon.png"/>
-<title>RankingTable</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/w3.css">
+  <link rel="shortcut icon" type="image/png" href="../images/favicon.png" />
+  <title>RankingTable</title>
 </head>
+
 <body class="w3-container w3-black w3-text-black">
-<div class="w3-container">
-<table class="w3-table-all w3-centered">
-  <tr class="w3-black">
-    <th>NAME</th> 
-    <th>LOGGED IN</th>	
-    <th>LEVEL 1</th> 
-    <th>LEVEL 2</th>
-    <th>LEVEL 3</th> 
-    <th>LEVEL 4</th>
-    <th>LEVEL 5</th> 
-    <th>LEVEL 6</th>
-    <th>LEVEL 7</th>
-    <th>LEVEL 8</th> 
-    <th>POINTS</th>	
-  </tr>
-<?php 
+  <div class="w3-container">
+    <table class="w3-table-all w3-centered">
+      <tr class="w3-black">
+        <th>NAME</th>
+        <th>LOGGED IN</th>
+        <th>LEVEL 1</th>
+        <th>LEVEL 2</th>
+        <th>LEVEL 3</th>
+        <th>LEVEL 4</th>
+        <th>LEVEL 5</th>
+        <th>LEVEL 6</th>
+        <th>LEVEL 7</th>
+        <th>LEVEL 8</th>
+        <th>POINTS</th>
+      </tr>
+      <?php 
     include('../controlDatabase/connectDatabase.php');
     $sql = "
     SELECT user.name,
@@ -70,7 +72,8 @@
         }
     mysqli_close($db);
 ?>
-</table>
-</div>
+    </table>
+  </div>
 </body>
+
 </html>
