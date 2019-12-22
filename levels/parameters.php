@@ -6,7 +6,7 @@
       var commandlist = [
          ["help", "Show commands"],
          ["clear", "Clear the console"],
-         ["dir", "List files"],
+         ["ls", "List files"],
          ["cat &lt;file&gt;", "Show file"],
          ["login &lt;username&gt; &lt;password&gt;", "Login to account - user: root, password: toor "],
       ];
