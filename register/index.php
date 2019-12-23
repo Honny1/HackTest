@@ -45,9 +45,10 @@
 
 <body>
    <h1>WELCOME TO THE REGISTRATION FOR HACK_TEST</h1>
+   <br/>
    <div align="center">
-      <div style="width:300px; border: solid 1px #000000; " align="left">
-         <div style="background-color:#000000; color:#FFFFFF; padding:3px;"><b>Register</b></div>
+      <div style="width:300px; border: solid 1px #ffffff;" align="left">
+         <div style="background-color:#ffffff; color:#000000; padding:3px;"><b>Register</b></div>
          <div style="margin:30px">
             <p style="color:#ff0000;" align="center">POZOR!!!<br /> Použij skutečný email a heslo/a které nepoužíváš
                normálně(neco jako 1234 je ideál) :D</p>
@@ -59,7 +60,7 @@
                <br /><br />
                <label>Email:</label>
                <div class="mui-textfield"><input type="email" name="email" class="box" required /></div><br /><br />
-               <input class="mui-btn mui-btn--flat" type="submit" value="Confirm" /><br />
+               <input class="mui-btn mui-btn--raised" type="submit" value="Confirm" /><br />
             </form>
             <div style="font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
          </div>

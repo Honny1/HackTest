@@ -68,8 +68,8 @@
    <h1>WELCOME TO THE HACK_TEST</h1>
    <p> Do you know what's waiting for you?</p>
    <div align="center" style="background-color:">
-      <div style="width:300px; border: solid 1px #000000; " align="left">
-         <div style="background-color:#000000; color:#FFFFFF; padding:3px;"><b>Login</b></div>
+      <div style="width:300px; border: solid 1px #ffffff; " align="left">
+         <div style="background-color:#ffffff; color:#000000; padding:3px;"><b>Login</b></div>
          <div style="margin:30px">
             <form class="mui-form--inline" action="" method="post">
                <label>UserName:</label>
@@ -77,7 +77,7 @@
                <label>Password:</label>
                <div class="mui-textfield"><input type="password" name="password" class="box" required /></div>
                <br /><br />
-               <input class="mui-btn mui-btn--flat" type="submit" value="Confirm" /><br />
+               <input class="mui-btn mui-btn--raised" type="submit" value="Confirm" /><br />
             </form>
             <div style="font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
          </div>

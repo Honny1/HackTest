@@ -1,7 +1,7 @@
 <?php include_once("htmlParts/header.php");?>
 <div>
     <h1>CLICK ON BUTTON FOR THE END</h1>
-    <button type="button" onclick="theEnd()">THE END</button>
+    <button class="mui-btn mui-btn--raised" onclick="theend()" disable>THE END</button>
 </div>
 <script>
     function theEnd() {

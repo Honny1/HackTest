@@ -11,7 +11,7 @@
 		</div>
 		<br>
 		<br>
-		<input class="mui-btn mui-btn--flat" type="submit" value="Confirm">
+		<input class="mui-btn mui-btn--raised" type="submit" value="Confirm">
 	</form>
 	<br><br>
 	<p hidden>Password: poopybutthole</p>

@@ -1,7 +1,12 @@
 /* CSS Document */
+@font-face {
+    font-family: get_schwifty;
+    src: url(get_schwifty.ttf);
+  }
+
 body {
   color: white;
-  background-color: #454545;
+  background-color: #000000;
   font-family: "Courier New";
   font-weight: bold;
   display: flex;
@@ -11,7 +16,11 @@ body {
   min-height: 100vh;
  }
 h1{
-	font-size: 300%;
+    font-size: 400%;
+    font-family: "get_schwifty";
+    -webkit-text-fill-color:  #66ccff;
+    -webkit-text-stroke-color: #00ff00;
+    -webkit-text-stroke-width: 1.50px; 
 }
 label {
 	font-weight:bold;
@@ -19,13 +28,18 @@ label {
     font-size:14px;
 }
 input[type=text]{
-    color: #FFFFFF;
+    color: #ffffff;
+    border: solid 1px #00ff00;
 }
-button {
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
+input[type=password]{
+    color: #ffffff;
+    border: solid 1px #00ff00;
 }
+input[type=email]{
+    color: #ffffff;
+    border: solid 1px #00ff00;
+}
+input[type=submit]{
+    border: solid 1px #00ff00;
+    color: #000000;
+    }
