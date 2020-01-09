@@ -67,7 +67,7 @@
       </div>
    </div>
    <br />
-   <a href="http://purkiada.sspbrno.cz/rick-and-morty/">BACK TO /HOME</a>
+   <a href="http://purkiada.cz/rick-and-morty/">BACK TO /HOME</a>
    <br />
    <a href="../index.php">LOGIN</a>
    <p>By: Hony</p>
