@@ -239,7 +239,7 @@ $(document).ready(function (e) {
                 }
              } else { log("User", "Access denied"); }
              break;
-          case "dir":
+          case "ls":
              if (logRoot) {
                 $.each(pageindex, function (id, content) {
                    log("", "" + content);
