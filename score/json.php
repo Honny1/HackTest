@@ -12,7 +12,7 @@
         IF(score.level7=1, 6, 0) AS level7,
         IF(score.level8=1, 6, 0) AS level8,
 
- 	    IF(score.level1=1, 1, 0)+
+ 	    IF(score.level1=1, 2, 0)+
         IF(score.level2=1, 2, 0)+
         IF(score.level3=1, 4, 0)+
         IF(score.level4=1, 4, 0)+
