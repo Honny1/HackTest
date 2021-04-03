@@ -1,6 +1,6 @@
 <?php 
 function saveLevel($idUser,$pass){
-  include("controlDatabase/connectDatabase.php");
+  include("connectDatabase.php");
   $passTolevel = array(
       "L0" =>                                      "level0",
       "1qaz2wsx" =>                                "level1",

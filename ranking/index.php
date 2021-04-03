@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/css/w3.css">
+<link rel="stylesheet" href="../css/w3.css">
 <title>RankingTable</title>
 </head>
 <body class="w3-container w3-black w3-text-black">

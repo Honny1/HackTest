@@ -5,7 +5,7 @@
     	</div>
         <div>
          <!--https://www.gre.ac.uk/it-and-library/itsecurity/infosec/university-passwords/examples-of-bad-passwords-->
-           <form class="mui-form--inline" action= "index.php" method="GET">
+         <form class="mui-form--inline" action= "./index.php" method="GET">
            		<div class="mui-textfield">
       				<input type="password" name="pass">
       			</div>
