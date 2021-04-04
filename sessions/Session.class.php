@@ -33,7 +33,7 @@ class Session {
         
    
    		if(!isset($_SESSION['login_user'])){
-   			header("location:index.php");
+   			header("location: index.php");
    		}
    		mysqli_close($db);
    		return $userId['iduser'];

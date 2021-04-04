@@ -1,10 +1,11 @@
 <?php
+	// ini_set('display_errors', 1);
+	// ini_set('display_startup_errors', 1);
+	// error_reporting(E_ALL);
 	//This part control Leves by name levels and save user progress to db
 	include_once('./sessions/Session.class.php');
 	include('./controlDatabase/controlDatabase.php');
-    
-    $session = new Session();
-	
+  $session = new Session();
 	$session->setLog(False);
     
 	if(!isset($_SESSION['pass']) && empty($_SESSION['pass'])){
